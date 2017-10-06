@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $# -eq 1 ]
+then
+    aws logs filter --start-time 2015-11-10T14:50:00Z --end-time  2022-11-10T15:00:00Z --log-group-name $1 
+elif [ $# -eq 2 ]
+then
+    aws logs filter --start-time 2015-11-10T14:50:00Z --end-time  2022-11-10T15:00:00Z --log-group-name $1 --filter-pattern $2 
+fi
